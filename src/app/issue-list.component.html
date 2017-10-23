@@ -1,0 +1,31 @@
+<div class="mat-elevation-z8">
+    <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="type">
+            <mat-header-cell *matHeaderCellDef> Tipo </mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.type}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+            <mat-header-cell *matHeaderCellDef> Estado </mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.state}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="reason">
+            <mat-header-cell *matHeaderCellDef> Motivo </mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.reason}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="description">
+            <mat-header-cell *matHeaderCellDef> Descrição </mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.description}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef> Data de criação </mat-header-cell>
+            <mat-cell *matCellDef="let issue"> {{issue.createdAt}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

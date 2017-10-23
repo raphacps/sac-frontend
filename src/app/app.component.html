@@ -1,11 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="mat-elevation-z8">
+<mat-toolbar color="primary">
+    <span>Sac - Front End</span>
+</mat-toolbar>
+</div>
 <div style="text-align:center">
   <h1>
     SAC - Frontend
   </h1>
-  <h1>Cadastro de Issues</h1>
- </div>
- 
-   <issue-form></issue-form>
-  
+  <h1>Atendimento</h1>
+</div>
 
+<nav>
+  <a routerLink="/cadastro" routerLinkActive="active">Cadastro</a>
+  <a routerLink="/consulta" routerLinkActive="active">Consulta</a>
+</nav>
+<br>
+<router-outlet></router-outlet>
+<!-- 
+<issue-form></issue-form>
+<br>
+<issues-list></issues-list> -->

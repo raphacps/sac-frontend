@@ -1,0 +1,38 @@
+<div class="mat-elevation-z8">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Atendimento</mat-card-title>
+    <mat-card-subtitle>Novo atendimento</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="example-container">
+      <mat-form-field>
+        <input [(ngModel)]="issue.state" matInput placeholder="Estado">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select [(ngModel)]="issue.type" placeholder="Tipo">
+          <mat-option value="Telefone">Telefone</mat-option>
+          <mat-option value="Chat">Chat</mat-option>
+          <mat-option value="Email">Email</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select [(ngModel)]="issue.reason" placeholder="Motivo">
+          <mat-option value="Elogios">Elogios</mat-option>
+          <mat-option value="Dúvidas">Dúvidas</mat-option>
+          <mat-option value="Reclamações">Reclamações</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput [(ngModel)]="issue.description" placeholder="Descrição"></textarea>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="saveIssue()" mat-raised-button color="primary">Salvar</button>
+  </mat-card-actions>
+</mat-card>
+</div>
